@@ -1,0 +1,877 @@
+[
+    {
+        "id": "start",
+        "desc": "W niedalekiej dolinie stoi zamek. Zamek ten do niedawna tętnił życiem.",
+        "next": [
+            {
+                "nextCard": "1",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "1",
+        "desc": "Wszystko się zmieniło po jednej z burzowych nocy, gdy słuch po wszystkich domownikach zaginął.",
+        "next": [
+            {
+                "nextCard": "2",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "desc": "Twoim zadaniem jako prywatnego detektywa jest dowiedzieć się co się stało.",
+        "next": [
+            {
+                "nextCard": "3",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "desc": "Dotarłeś do bramy zamkowej, która oddziela Cię od dziedzińca. Brama jest wysoka, ale da radę się po niej wspiąć.",
+        "next": [
+            {
+                "nextCard": "4",
+                "buttonText": "Wespnij się na bramę"
+            },
+            {
+                "nextCard": "3a",
+                "buttonText": "Poszukaj innej drogi"
+            }
+        ]
+    },
+    {
+        "id": "3a",
+        "desc": "Obszedłeś mur z obu stron. Znalazłeś zabłoconą czapkę z daszkiem jednak nigdzie nie było dogodnego miejsca, aby przejść.",
+        "item": "czapka z daszkiem",
+        "next": [
+            {
+                "nextCard": "3",
+                "buttonText": "Wróć do bramy"
+            }
+        ]
+
+    },
+    {
+        "id": "4",
+        "desc" : "Przejście przez bramę nie było problemem. Znajdujesz się na dziedzińcu.",
+        "next": [
+            {
+                "nextCard": "4a",
+                "buttonText": "Rozejrzyj się"
+            },
+            {
+                "nextCard": "5",
+                "buttonText": "Wejdź do zamku"
+            }
+        ]
+    },
+    {
+        "id": "4a",
+        "desc": "Dziedziniec jest z każdej strony otoczony murem, naprzeciwko bramy znajdują się wielkie drewniane drzwi będące wejściem do zamku. Kątem oka zauważasz ruch zasłony w jednym z okien.",
+        "next": [
+            {
+                "nextCard": "5",
+                "buttonText":"Wejdź do zamku"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "desc": "Popychasz drewniane drzwi i wchodzisz do zamku. Drzwi za Tobą zamykają się z trzaskiem. Wszędzie jest ciemno.",
+        "next": [
+            {
+                "nextCard": "5a",
+                "buttonText": "Spróbuj otworzyć drzwi"
+            },
+            {
+                "nextCard": "6",
+                "buttonText": "Zapal latarkę i się rozejrzyj"
+            }
+        ]
+    },
+    {
+        "id": "5a",
+        "desc": "Drzwi nie drgną.",
+        "next":[
+            {
+                "nextCard": "6",
+                "buttonText": "Zapal latarkę i się rozejrzyj"
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "desc": "Jesteś w dużym holu, na suficie wiszą trzy kryształowe żyrandole, a po bokach znajdują się kamery. Podłoga jest dziwnie czysta jakby zdjęto z niej wykładzinę. Widzisz drzwi z lewej i drzwi z prawej oraz schody będące za stołem.",
+        "light": 1,
+        "next":[
+            {
+                "nextCard": "7",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "desc": "Na dywanie pod sobą zauważasz ślady zadrapań. Z prawej strony holu znajduje się budka ochroniarza.",
+        "random":{
+            "out": ["budka", "7a", "7a"],
+            "buttonText": "Dalej"
+        }
+    },
+    {
+        "id": "7a",
+        "desc": "W drodze do budki słyszysz skrzypnięcia. Świecisz latarką w stronę dźwięku, ale nic tam nie widzisz.",
+        "next":[
+            {
+                "nextCard": "budka",
+                "buttonText": "Idź do budki"
+            }
+        ]
+    },
+    {
+        "id": "budka",
+        "desc": "Żaden z ekranów nie działa. Na podłodze przy stole zauważasz delikatne ślady krwi. Postanawiasz spojrzeć pod stół. Widzisz wydrapane słowo 'SWIATLO' i strzałkę wskazującą na ścianę po prawej.",
+        "next":[
+            {
+                "nextCard": "9",
+                "buttonText": "Podejdź do ściany"
+            },
+            {
+                "nextCard": "1s",
+                "buttonText": "Wejdź po schodach"
+            },
+            {
+                "nextCard": "1l",
+                "buttonText": "Pokój z lewej"
+            },
+            {
+                "nextCard": "1p",
+                "buttonText": "Pokój po prawej"
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "desc": "Jesteś w budce. Na ścianie wisi na wpół otwarta skrzynka. W środku znajdują się miejsca na trzy bezpieczniki oznaczone A, B, C.",
+        "next":[
+            {
+                "required": "bezpiecznik A",
+                "nextCard": "9a",
+                "buttonText": "Włóż bezpiecznik A"
+            },
+            {
+                "required": "bezpiecznik B",
+                "nextCard": "9b",
+                "buttonText": "Włóż bezpiecznik B"
+            },
+            {
+                "required": "bezpiecznik C",
+                "nextCard": "9c",
+                "buttonText": "Włóż bezpiecznik C"
+            },
+            {
+                "nextCard": "budka",
+                "buttonText": "Wróć"
+            },
+            {
+                "required": "prad",
+                "nextCard": "end_seq",
+                "buttonText": "Obejrzyj nagrania"
+            }
+        ]
+    },
+    {
+        "id": "9a",
+        "desc": "Bezpiecznik pasuje. Jeden z żyrandoli się zapalił.",
+        "light": 1,
+        "delete": "bezpiecznik A",
+        "next":[
+            {
+                "nextCard": "9",
+                "buttonText": "Wróć"
+            }
+        ]
+    },
+    {
+        "id": "9b",
+        "desc": "Bezpiecznik pasuje. Jeden z żyrandoli się zapalił.",
+        "light": 1,
+        "delete": "bezpiecznik B",
+        "next":[
+            {
+                "nextCard": "9",
+                "buttonText": "Wróć"
+            }
+        ]
+    },
+    {
+        "id": "9c",
+        "desc": "Bezpiecznik pasuje. Jeden z żyrandoli się zapalił.",
+        "light": 1,
+        "delete": "bezpiecznik C",
+        "next":[
+            {
+                "nextCard": "9",
+                "buttonText": "Wróć"
+            }
+        ]
+    },
+    {
+        "id": "1s",
+        "desc": "Wchodzisz po skrzypiących schodach. Znajdujesz się w korytarzu z drzwiami po każdej ze stron i oknem z zasłoną na końcu korytarza.",
+        "next":[
+            {
+                "nextCard": "2sa",
+                "buttonText": "Sprawdź drzwi po lewej"
+            },
+            {
+                "nextCard": "3s",
+                "buttonText": "Sprawdź drzwi po prawej"
+            },
+            {
+                "nextCard": "2sb",
+                "buttonText": "Sprawdź okno"
+            }
+        ]
+    },
+    {
+        "id": "2sa",
+        "desc": "Drzwi nie drgną.",
+        "next":[
+            {
+                "nextCard": "2sb",
+                "buttonText": "Sprawdź okno"
+            },
+            {
+                "nextCard": "3s",
+                "buttonText": "Sprawdź drzwi po prawej"
+            }
+        ]
+    },
+    {
+        "id": "2sb",
+        "desc": "Podchodzisz do okna i je otwierasz. Pod sobą widzisz dziedziniec z drzwiami, którymi wszedłeś do środka. Zauważasz, że drzwi wejściowe są zablokowane drewnianą belką. Pod oknem jest duży żeliwny kaloryfer.",
+        "next":[
+            {
+                "nextCard": "2sa",
+                "buttonText": "Sprawdź drzwi po lewej"
+            },
+            {
+                "nextCard": "3s",
+                "buttonText": "Sprawdź drzwi po prawej"
+            }
+        ]
+    },
+    {
+        "id": "3s",
+        "desc": "Drzwi są otwarte i możesz wejść do środka.",
+        "next":[
+            {
+                "nextCard": "4s",
+                "buttonText": "Wejdź"
+            },
+            {
+                "nextCard": "2sa",
+                "buttonText": "Sprawdź drzwi po lewej"
+            },
+            {
+                "nextCard": "2sb",
+                "buttonText": "Sprawdź okno"
+            }
+        ]
+    },
+    {
+        "id": "4s",
+        "desc": "Widzisz pokój sypialniany. Łóżko jest niezaścielone, a na biurku znajduje się telegram.",
+        "next":[
+            {
+                "nextCard": "4sa",
+                "buttonText": "Przeczytaj telegram."
+            },
+            {
+                "nextCard": "5s",
+                "buttonText": "Sprawdź szafki"
+            }
+        ]
+    },
+    {
+        "id": "4sa",
+        "desc": "WYDOSTAŁ SIĘ - STOP - ZARZĄDŹ EWAKUACJĘ - STOP - PAMIETAJCIE O ŚWIETLE - STOP - UCIEKAJ",
+        "random":{
+            "out": ["5s", "4saa", "4saa"],
+            "buttonText": "Wróć i sprawdź szafki"
+        }
+    },
+    {
+        "id": "4saa",
+        "desc": "Na korytarzu słychać kroki.",
+        "next":[
+            {
+                "nextCard": "bad_end_1",
+                "buttonText": "Zobacz co to"
+            },
+            {
+                "nextCard": "4sab",
+                "buttonText": "Schowaj się pod łóżkiem"
+            }
+        ]
+    },
+    {
+        "id": "bad_end_1",
+        "desc": "Ostatnie co zobaczyłeś to cień przemykający przed Tobą.",
+        "next":[
+            {
+                "nextCard": "bad_end_1a",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "bad_end_1a",
+        "scary": "Potem była już tylko ciemność.....",
+        "next": "bad_end_1b"
+    },
+    {
+        "id": "bad_end_1b",
+        "desc": "Nie żyjesz. Odśwież stronę aby zacząć od nowa lub wróć do momentu przed śmiercią.",
+        "next":[
+            {
+                "nextCard": "4saa",
+                "buttonText": "Powrót przed śmiercią"
+            }
+        ]
+    },
+    {
+        "id": "4sab",
+        "desc": "Słyszałeś je jeszcze przez chwilę po czym ucichły.",
+        "next":[
+            {
+                "nextCard": "5s",
+                "buttonText": "Wstań i przeszukaj szafki"
+            }
+        ]
+    },
+    {
+        "id": "5s",
+        "desc": "W jednej z szafek znalazłeś bezpiecznik z podpisem A",
+        "item": "bezpiecznik A",
+        "next":[
+            {
+                "nextCard": "6s",
+                "buttonText": "Wróć do budki w holu"
+            }
+        ]
+    },
+    {
+        "id": "6s",
+        "desc": "Podczas powrotu zauważasz na podłodze ledwo widoczne odciski dużych stóp.",
+        "next":[
+            {
+                "nextCard": "budka",
+                "buttonText": "Idź dalej"
+            }
+        ]
+    },
+    {
+        "id": "1l",
+        "desc": "Otwierasz drzwi, a za nimi schody prowadzące w dół. Po zejściu wchodzisz do pokoju, który jest oświetlony tylko na środku. Dookoła nieprzenikniona ciemność, że nawet latarka jej nie przebija.",
+        "next": [
+            {
+                "nextCard": "2l",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "2l",
+        "desc": "Na środku znajduje się stół.",
+        "next": [
+            {
+                "nextCard": "3l",
+                "buttonText": "Podejdź do stołu"
+            }
+        ]
+    },
+    {
+        "id": "3l",
+        "desc": "Na stole znajdujesz bezpiecznik z podpisem B. Z lewej strony słychać lekki oddech.",
+        "item": "bezpiecznik B",
+        "next":[
+            {
+                "nextCard": "3la",
+                "buttonText": "Podejdź bliżej"
+            },
+            {
+                "nextCard": "4l",
+                "buttonText": "Wróć do budki"
+            }
+        ]
+    },
+    {
+        "id": "3la",
+        "desc": "Oddech stał się wyraźniejszy. W ciemności ktoś jest.",
+        "next": [
+            {
+                "nextCard": "3lb",
+                "buttonText": "\"Halo! Jest tu ktoś?\""
+            },
+            {
+                "nextCard": "4l",
+                "buttonText": "Wróć do budki"
+            }
+        ]
+    },
+    {
+        "id": "3lb",
+        "desc": "Nikt Ci nie odpowiedział. Oddech przerwało ciche mlaśnięcie i stłumiony okrzyk bólu.",
+        "next": [
+            {
+                "nextCard": "bad_end_2",
+                "buttonText": "Podejdź bliżej i zaświeć latarką"
+            },
+            {
+                "nextCard": "4l",
+                "buttonText": "Wróć do budki"
+            }
+        ]
+    },
+    {
+        "id": "bad_end_2",
+        "desc": "Twoim oczom ukazał się stos zwłok i rozszarpanych kończyn. Wszędzie była krew. To co zabiło najświeższe zwłoki nadal tu było.",
+        "next": [
+            {
+                "nextCard": "bad_end_2a",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "bad_end_2a",
+        "scary": "I już Cię znalazło......",
+        "next": "bad_end_2b"
+    },
+    {
+        "id": "bad_end_2b",
+        "desc": "Nie żyjesz. Odśwież stronę aby zacząć od nowa lub wróć do momentu przed śmiercią.",
+        "next":[
+            {
+                "nextCard": "3la",
+                "buttonText": "Powrót przed śmiercią"
+            }
+        ]
+    },
+    {
+        "id": "4l",
+        "desc": "Szybkim krokiem wchodzisz po schodach. Na plecach czujesz czyiś wzrok. Odwracasz się na chwilę i za stołem widzisz przez krótki moment parę czerwonych ślepi.",
+        "next":[
+            {
+                "nextCard": "budka",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "1p",
+        "desc": "Pokój ten wygląda na warsztat. W rogu leżą zwłoki.",
+        "next":[
+            {
+                "nextCard": "2p",
+                "buttonText": "Przeszukaj zwłoki"
+            },
+            {
+                "nextCard": "1pa",
+                "buttonText": "Przeszukaj pokój"
+            }
+        ]
+    },
+    {
+        "id": "2p",
+        "desc": "Są to zwłoki mężczyzna z raną brzucha. Czuć od niego alkohol. W kieszeni znajdujesz bezpiecznik z podpisem C",
+        "item": "bezpiecznik C",
+        "next":[
+            {
+                "nextCard": "1pa",
+                "buttonText": "Przeszukaj pokój"
+            },
+            {
+                "nextCard": "3p",
+                "buttonText": "Wróć do budki w holu"
+            }
+        ]
+    },
+    {
+        "id": "1pa",
+        "desc": "Znajdujesz linę w jednej z półek.",
+        "item": "lina",
+        "next":[
+            {
+                "nextCard": "2p",
+                "buttonText": "Przeszukaj zwłoki"
+            },
+            {
+                "nextCard": "3p",
+                "buttonText": "Wróć do budki w holu"
+            }
+        ]
+    },
+    {
+        "id": "3p",
+        "desc": "Wracasz do holu.",
+        "random":{
+            "out": ["budka", "3pa", "3pa"],
+            "buttonText": "Dalej"
+        }
+    },
+    {
+        "id": "3pa",
+        "scary": "AAAAAAAAaaaa....",
+        "next": "3pb"
+    },
+    {
+        "id": "3pb",
+        "desc": "Słyszysz jakby krzyk dziecka u góry. Ale ucichł tak samo szybko jak rozbrzmiał. Zaniepokojony wracasz do budki.",
+        "next":[
+            {
+                "nextCard": "budka",
+                "buttonText": "Dalej"
+            }
+        ]
+
+    },
+    {
+        "id": "end_seq",
+        "desc": "Monitory wreszcie zaczynają działać. Oglądasz nagranie z monitoringu.",
+        "next": [
+            {
+                "nextCard": "10",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "desc": "Na nagraniu widzisz wszystkich domowników w ubraniach do spania. Słuchają przemowy starszego pana stojącego na schodach.",
+        "next": [
+            {
+                "nextCard": "11",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "desc": "\"Proszę aby wszyscy spakowali najpotrzebniejsze rzeczy i jak najszybciej opuścili zamek. Niestety moja przeszłość w końcu mnie dogoniła. Nie chcę aby komukolwiek stała się krzywda, więc błagam pospiesz-\"",
+        "next": [
+            {
+                "nextCard": "12",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "12",
+        "scary": "BUUUMMM!!!!",
+        "shaky": true,
+        "next": "13"
+    },
+    {
+        "id": "13",
+        "desc": "Przerywa mu potężna błyskawica. Na sali gaśnie światło. Widocznie kamery mają zasilanie awaryjne, bo dalej nagrywają.",
+        "next":[
+            {
+                "nextCard": "14",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "14",
+        "desc": "Wszyscy ludzie wpadają w panikę, rzucając się do wyjścia. Starszy pan ucieka na górę do pokoju po lewej.",
+        "next":[
+            {
+                "nextCard": "15",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "15",
+        "scary": "OJCZEEE!!!!",
+        "shaky": true,
+        "next": "16"
+    },
+    {
+        "id": "16",
+        "desc": "Na sali pojawił się znikąd potwór. Ogromny mężczyzna z czerwonymi ślepiami. W szale rozpętał istną masakrę. Drzwi wejściowe były zablokowane, więc większość ludzi schowała się w piwnicy, do której wchodziło się z lewej strony.",
+        "next":[
+            {
+                "nextCard": "17",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "17",
+        "desc": "Potwór pobiegł za nimi i na nagraniu było już tylko słychać wrzaski.",
+        "next":[
+            {
+                "nextCard": "18",
+                "buttonText": "Zabierz kasetę i uciekaj"
+            }
+        ]
+    },
+    {
+        "id": "18",
+        "desc": "Teraz gdy świeciły już żyrandole, zauważasz na ścianie krwawy napis: \"DLACZEGO MNIE ZOSTAWIŁEŚ?\"",
+        "item": "kaseta",
+        "next":[
+            {
+                "nextCard": "19",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "19",
+        "desc": "Za sobą słyszysz kroki. Na schodach pojawia się starszy pan ze strzelbą, który woła:",
+        "next":[
+            {
+                "nextCard": "20",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "20",
+        "scary": "UCIEKAJ...ON JEST ZA TOBĄ!!!!",
+        "shaky": true,
+        "next": "21"
+    },
+    {
+        "id": "21",
+        "desc": "Słyszysz jego oddech za plecami, ale nie masz czasu się odwrócić.",
+        "next":[
+            {
+                "nextCard": "21a",
+                "buttonText": "Pobiegnij do warsztatu"
+            },
+            {
+                "nextCard": "21b",
+                "buttonText": "Pobiegnij do piwnicy"
+            },
+            {
+                "nextCard": "22",
+                "buttonText": "Pobiegnij na górę"
+            }
+        ]
+    },
+    {
+        "id": "21a",
+        "desc": "Starszy pan ma trudności z celowaniem w ruchomy cel i nie trafia. Zanim dobiegniesz do warsztatu potwór Cię łapie i przekręca kark.",
+        "next":[
+            {
+                "nextCard": "bad_end_3",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "21b",
+        "desc": "To nie był dobry pomysł. Trafiasz do piwnicy pełnej trupów, z której nie ma wyjścia. Twój krzyk przerywa szybka śmierć.",
+        "next":[
+            {
+                "nextCard": "bad_end_3",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "bad_end_3",
+        "desc": "Nie żyjesz. Odśwież stronę aby zacząć od nowa lub wróć do momentu przed śmiercią.",
+        "next":[
+            {
+                "nextCard": "21",
+                "buttonText": "Powrót przed śmiercią"
+            }
+        ]
+    },
+    {
+        "id": "22",
+        "desc": "Biegniesz w stronę starszego pana.",
+        "light": -4,
+        "delete": "prad",
+        "next":[
+            {
+                "required": "czapka z daszkiem",
+                "nextCard": "23",
+                "buttonText": "Rzuć w potwora czapką"
+            },
+            {
+                "nextCard": "22a",
+                "buttonText": "Rzuć w potwora latarką"
+            }
+        ]
+    },
+    {
+        "id": "22a",
+        "desc": "Latarka odbija się od potwora i ten dogania Cię na schodach.",
+        "next": [
+            {
+                "nextCard": "bad_end_4",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "bad_end_4",
+        "desc": "Przydałoby się coś innego aby tym rzucić. Jeśli tego nie znalazłeś odśwież grę aby zacząć od nowa.",
+        "next":[
+
+        ]
+    },
+    {
+        "id": "23",
+        "desc": "Czapka zasłania potworowi oczy. To kupuje Ci trochę czasu. To i strzał z dubeltówki.",
+        "delete": "czapka z daszkiem",
+        "next": [
+            {
+                "nextCard": "24",
+                "buttonText": "Biegnij w górę"
+            }
+        ]
+    },
+    {
+        "id": "24",
+        "scary": "GRRAAUGHHHH",
+        "shaky": true,
+        "next": "25"
+    },
+    {
+        "id": "25",
+        "desc": "Wściekły potwór rzuca się na swego ojca.",
+        "next": [
+            {
+                "nextCard": "25a",
+                "buttonText": "Biegnij do pokoju po prawej"
+            },
+            {
+                "nextCard": "26",
+                "buttonText": "Biegnij do okna"
+            }
+        ]
+    },
+    {
+        "id": "25a",
+        "desc": "Wbiegasz do pokoju i nie widzisz innej opcji jak schować się pod łóżko.",
+        "next": [
+            {
+                "nextCard": "25b",
+                "buttonText": "Schowaj się pod łóżkiem"
+            }
+        ]
+    },
+    {
+        "id": "25b",
+        "desc": "Słyszysz jak potwór rozszarpuje zwłoki i po chwili wbiega do pokoju. Węszy.",
+        "next": [
+            {
+                "nextCard": "25c",
+                "buttonText": "Nic nie rób"
+            }
+        ]
+    },
+    {
+        "id": "25c",
+        "desc": "Zdążył już poznać zapach ludzkiego mięsa. Wyciąga Cię spod łóżka.",
+        "next": [
+            {
+                "nextCard": "bad_end_5",
+                "buttonText": "Dalej"
+            }
+        ]
+    },
+    {
+        "id": "bad_end_5",
+        "desc": "Nie żyjesz. Odśwież stronę aby zacząć od nowa lub wróć do momentu przed śmiercią.",
+        "next": [
+            {
+                "nextCard": "25",
+                "buttonText": "Powrót przed śmiercią"
+            }
+        ]
+    },
+    {
+        "id": "26",
+        "desc": "Podbiegasz do okna. Za sobą słyszysz krzyki.",
+        "next": [
+            {
+                "required": "lina",
+                "nextCard": "27",
+                "buttonText": "Przywiąż linę do kaloryfera"
+            },
+            {
+                "nextCard": "26a",
+                "buttonText": "Skocz"
+            }
+        ]
+    },
+    {
+        "id": "26a",
+        "desc": "Nie żyjesz. Musi być jakaś inna droga ucieczki. Odśwież aby zacząć od nowa i ją znaleźć.",
+        "next": [
+
+        ]
+    },
+    {
+        "id": "27",
+        "desc": "Przywiązujesz linę do kaloryfera i zaczynasz po niej schodzić. Po wyjściu za okno widzisz jak potwór obraca się w Twoją stronę.",
+        "next":[
+            {
+                "nextCard": "28",
+                "buttonText": "Zacznij schodzić"
+            }
+        ]
+    },
+    {
+        "id": "28",
+        "desc": "Stawiasz nogi na ziemi i czym prędzej biegniesz do bramy.",
+        "next":[
+            {
+                "nextCard": "29",
+                "buttonText": "Przejdź przez bramę"
+            }
+        ]
+    },
+    {
+        "id": "29",
+        "scary": "GRRAAAAAUUUGHHHH",
+        "shaky": true,
+        "next": "30"
+    },
+    {
+        "id": "30",
+        "desc": "Wsiadasz do swojego samochodu, odpalasz i odjeżdżasz. Wraz z dowodem co stało się w zamku.",
+        "next":[
+            {
+                "nextCard": "31",
+                "buttonText": "Koniec"
+            }
+        ]
+    },
+    {
+        "id": "31",
+        "scary": "Koniec   ?   ",
+        "next": "koniec"
+    },
+    {
+        "id": "koniec",
+        "desc": "Odśwież stronę, aby zagrać ponownie",
+        "next":[
+
+        ]
+    }
+]

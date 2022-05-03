@@ -1,0 +1,31 @@
+{
+        "id": "4",
+        "desc": "random",
+        "random":{
+            "out": ["start", "3"],
+            "buttonText": "Dalej"
+        }
+        
+    }
+
+{
+        "id": "3",
+        "desc": "Dotarłeś do bramy zamkowej, która oddziela Cię od dziedzińca. Brama jest wysoka, ale da radę się po niej wspiąć.",
+        "next": [
+            {
+                "required": "czapka z daszkiem",
+                "nextCard": "4",
+                "buttonText": "Wespnij się na bramę"
+            },
+            {
+                "nextCard": "3a",
+                "buttonText": "Poszukaj innej drogi"
+            }
+        ]
+    },
+
+    {
+        "id": "4",
+        "scary": "Uciekaj",
+        "next": "start"
+    }

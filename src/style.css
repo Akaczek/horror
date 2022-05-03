@@ -1,0 +1,87 @@
+.black_back{
+    background-color: black;
+}
+.flashlight{
+    background-color: rgb(40, 40, 40);
+}
+.one_candle{
+    background-color: rgb(70, 70, 70);
+}
+.two_candles{
+    background-color: rgb(100, 100, 100);
+}
+.three_candles{
+    background-color: rgb(130, 130, 130);
+}
+
+.black{
+    color: black;
+}
+.white_back{
+    background-color: white;
+}
+.white{
+    color: white;
+}
+body{
+    margin: 0;
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+}
+
+@keyframes shake {
+    0% {transform: translate(10px, 20px)}
+    20% {transform: translate(0px, -15px)}
+    40% {transform: translate(-20px, 10px)}
+    60% {transform: translate(5px, 20px)}
+    80% {transform: translate(15px, -20px)}
+    100% {transform: translate(0px, 0px)}
+    /*60% {transform: translate(30px, 20px)}
+    70% {transform: translate(30px, 20px)}
+    80% {transform: translate(30px, 20px)}
+    90% {transform: translate(30px, 20px)}
+    100% {transform: translate(30px, 20px)}*/
+} 
+
+.shake{
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+p{
+    margin: 5px;
+}
+
+#main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 800px;
+}
+
+.equipment{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.equipment_items{
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    font-size: 16px;
+}
